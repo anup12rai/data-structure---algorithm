@@ -1,13 +1,12 @@
+//bst ko code
 #include<stdio.h>
-#include<stdlib.h>//
-struct Node
-{
+#include<stdlib.h>
+struct Node{
     int key;
     struct Node *left;
     struct Node *right;
 };
-struct Node* createNode(int key)
-{
+struct Node* createNode(int key){
     struct Node *temp;
       temp = (struct Node*)malloc(sizeof(struct Node));
     if(temp == NULL){
@@ -32,7 +31,6 @@ int insertChild(struct Node *node, int key){
             return -1;
         }
     }
-
     else if(key > node->key){
         if(node->right == NULL){
             node->right = createNode(key);
@@ -41,9 +39,7 @@ int insertChild(struct Node *node, int key){
         else{
             return -2;
         }
-    }
-
-    else{
+    }else{
         return -3;
     }
 }
