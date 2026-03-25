@@ -19,9 +19,7 @@ struct Node* createNode(int key){
     temp->right = NULL;
 
     return temp;
-}
-
-int insertChild(struct Node *node, int key){
+}int insertChild(struct Node *node, int key){
     if(key < node->key){
         if(node->left == NULL){
             node->left = createNode(key);
