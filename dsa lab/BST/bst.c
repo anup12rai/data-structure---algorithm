@@ -1,6 +1,7 @@
 //bst ko code
 #include<stdio.h>
 #include<stdlib.h>
+//struct banako
 struct Node{
     int key;
     struct Node *left;
